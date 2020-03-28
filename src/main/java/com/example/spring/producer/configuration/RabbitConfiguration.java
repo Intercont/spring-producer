@@ -19,7 +19,7 @@ public class RabbitConfiguration {
     private ConnectionFactory connectionFactory;
 
     @Bean
-    private SimpleRabbitListenerContainerFactory simpleRabbitListenerContainerFactory() {
+    public SimpleRabbitListenerContainerFactory simpleRabbitListenerContainerFactory() {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setMessageConverter(jacksonConverter());
